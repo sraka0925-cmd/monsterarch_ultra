@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "monster-ultra-terminal"
+version = "0.2.0"
+description = "Slowly rotating white energy drink can in a truecolor terminal"
+requires-python = ">=3.8"
+dependencies = ["Pillow>=9.1"]
+
+[project.scripts]
+monster = "monster:run"
+
+[tool.setuptools]
+py-modules = ["monster"]
+
+[tool.setuptools.data-files]
+"share/monster-ultra" = ["monster.png"]
+
